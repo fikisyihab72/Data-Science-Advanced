@@ -1,0 +1,43 @@
+Nama : Fiki Syihab Irawan
+email : fikiruztiez@gmail.com
+
+SOAL :
+Tugas Hari Ke-13
+Dari Database Chinook, Saya ingin mendapatkan/menampilkan 3 kolom
+Yaitu Nama Album, Nama Artis, dan Judul Lagu/Track
+Dengan Syarat
+• BAND Aerosmith
+• BAND AC/DC
+• Dimana untuk BAND AC/DC Nama Album yang ditampilkan adalah Let There Be
+Rock
+
+Jawaban :
+Query SQL : SELECT a.Title, b.Name, c.Name as "track" FROM artists b INNER JOIN albums a ON b.ArtistId = a.ArtistId INNER JOIN tracks c ON a.AlbumId = c.AlbumId WHERE b.Name = "Aerosmith" OR (b.Name = "AC/DC" AND a.Title = "Let There Be Rock")
+
+
+Hasil :
+
+       Title            Name         track  
+1.  Let There Be Rock	AC/DC	Go Down
+2.  Let There Be Rock	AC/DC	Dog Eat Dog
+3.  Let There Be Rock	AC/DC	Let There Be Rock
+4.  Let There Be Rock	AC/DC	Bad Boy Boogie
+5.  Let There Be Rock	AC/DC	Problem Child
+6.  Let There Be Rock	AC/DC	Overdose
+7.  Let There Be Rock	AC/DC	Hell Ain't A Bad Place To Be
+8.  Let There Be Rock	AC/DC	Whole Lotta Rosie
+9.  Big Ones	Aerosmith	Walk On Water
+10. Big Ones	Aerosmith	Love In An Elevator
+11. Big Ones	Aerosmith	Rag Doll
+12. Big Ones	Aerosmith	What It Takes
+13. Big Ones	Aerosmith	Dude (Looks Like A Lady)
+14. Big Ones	Aerosmith	Janie's Got A Gun
+15. Big Ones	Aerosmith	Cryin'
+16. Big Ones	Aerosmith	Amazing
+17. Big Ones	Aerosmith	Blind Man
+18. Big Ones	Aerosmith	Deuces Are Wild
+19. Big Ones	Aerosmith	The Other Side
+20. Big Ones	Aerosmith	Crazy
+21. Big Ones	Aerosmith	Eat The Rich
+22. Big Ones	Aerosmith	Angel
+23. Big Ones	Aerosmith	Livin' On The Edge
